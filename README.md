@@ -1,63 +1,46 @@
-# A Whirlwind Tour of Python
+# 회오리바람을 탄 파이썬
 
-*Jake VanderPlas, Summer 2016*
+*제이크 반더플라스(Jake VanderPlas), 2016년 여름*
 
-This repository contains the Jupyter Notebooks behind my O'Reilly report,
-[*A Whirlwind Tour of Python*](http://www.oreilly.com/programming/free/a-whirlwind-tour-of-python.csp) (free [100-page pdf](http://www.oreilly.com/programming/free/files/a-whirlwind-tour-of-python.pdf)).
+*박해선(https://tensorflow.blog), 2018년 봄*
 
-*A Whirlwind Tour of Python* is a fast-paced introduction to essential
-components of the Python language for researchers and developers who are
-already familiar with programming in another language.
+*이 노트북은 제이크 반더플라스(Jake VanderPlas)의 [A Whirlwind Tour of Python](http://www.oreilly.com/programming/free/a-whirlwind-tour-of-python.csp)(OReilly Media, 2016)를 기반으로 만들어졌습니다. 전체 노트북의 목록은 https://github.com/rickiepark/WhirlwindTourOfPython 에서 볼 수 있습니다.*
 
-The material is particularly aimed at those who wish to use Python for data 
-science and/or scientific programming, and in this capacity serves as an
-introduction to
-[*The Python Data Science Handbook*](http://shop.oreilly.com/product/0636920034919.do) (also
-with notebooks [on github](https://github.com/jakevdp/PythonDataScienceHandbook)).
-These materials are adapted from courses and workshops I've given on these
-topics at University of Washington and at various conferences, meetings, and
-workshops around the world.
+*회오리바람을 탄 파이썬*은 다른 프로그래밍 언어를 이미 알고 있는 연구자와 개발자들에게 파이썬의 핵심 요소를 빠르게 전달하기 위한 안내서입니다. 파이썬을 데이터 과학이나 과학 프로그래밍에 사용하는데 촛점을 맞추었습니다.
 
-This material was written and tested using **Python 3.5**, and should work for any Python 3.X
-version. I have done my best to note places where the syntax of Python 2.X will differ.
+이 노트북은 **파이썬 3.5**에서 테스트되었지만 어떤 파이썬 3.X 버전에서도 작동됩니다. 파이썬 2.X의 문법과 다른 점은 가능한 표기하도록 노력했습니다.
 
-## Index
+## 목차
 
-*(Note: sometimes GitHub's notebook rendering can be slow or finicky.
-If you're having trouble with the following links, try viewing the material
-[on nbviewer](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/Index.ipynb))*
+*(노트: 깃허브의 노트북 렌더링이 느리거나 문제가 있을 때는 [nbviewer]((http://nbviewer.jupyter.org/github/rickiepark/WhirlwindTourOfPython/blob/master/Index.ipynb))를 사용하세요)*
 
-[Notebook Index](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/Index.ipynb)
+[목차](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/목차.ipynb)
 
-1. [Introduction](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/00-Introduction.ipynb)
-2. [How to Run Python Code](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/01-How-to-Run-Python-Code.ipynb)
-3. [Basic Python Syntax](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/02-Basic-Python-Syntax.ipynb)
-4. [Python Semantics: Variables](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/03-Semantics-Variables.ipynb)
-5. [Python Semantics: Operators](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/04-Semantics-Operators.ipynb)
-6. [Built-In Scalar Types](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/05-Built-in-Scalar-Types.ipynb)
-7. [Built-In Data Structures](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/06-Built-in-Data-Structures.ipynb)
-8. [Control Flow Statements](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/07-Control-Flow-Statements.ipynb)
-9. [Defining Functions](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/08-Defining-Functions.ipynb)
-10. [Errors and Exceptions](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/09-Errors-and-Exceptions.ipynb)
-11. [Iterators](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/10-Iterators.ipynb)
-12. [List Comprehensions](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/11-List-Comprehensions.ipynb)
-13. [Generators and Generator Expressions](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/12-Generators.ipynb)
-14. [Modules and Packages](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/13-Modules-and-Packages.ipynb)
-15. [Strings and Regular Expressions](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/14-Strings-and-Regular-Expressions.ipynb)
-16. [Preview of Data Science Tools](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/15-Preview-of-Data-Science-Tools.ipynb)
-17. [Resources for Further Learning](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/16-Further-Resources.ipynb)
-18. [Appendix: Code To Reproduce Figures](http://nbviewer.jupyter.org/github/jakevdp/WhirlwindTourOfPython/blob/master/17-Figures.ipynb)
+1. [소개](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/01-소개.ipynb)
+2. [파이썬 코드를 실행하는 방법](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/02-파이썬 코드를 실행하는 방법.ipynb)
+3. [파이썬 문법 빠르게 훑어 보기](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/03-파이썬 문법 빠르게 훑어 보기.ipynb)
+4. [변수와 객체](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/04-변수와 객체.ipynb)
+5. [연산자](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/05-연산자.ipynb)
+6. [간단한 기본 데이터 타입](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/06-간단한 기본 데이터 타입.ipynb)
+7. [기본 데이터 구조](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/07-기본 데이터 구조.ipynb)
+8. [제어문](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/08-제어문.ipynb)
+9. [함수](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/09-함수.ipynb)
+10. [에러와 예외처리](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/10-에러와 예외처리.ipynb)
+11. [반복자](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/11-반복자.ipynb)
+12. [리스트 내포](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/12-리스트 내포.ipynb)
+13. [제너레이터](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/13-제너레이터.ipynb)
+14. [모듈과 패키지](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/14-모듈과 패키지.ipynb)
+15. [문자열과 정규 표현식](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/15-문자열과 정규 표현식.ipynb)
+16. [데이터 과학 도구 소개](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/16-데이터 과학 도구 소개.ipynb)
+17. [Resources for Further Learning](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/16-Further-Resources.ipynb)
+18. [Appendix: Code To Reproduce Figures](https://github.com/rickiepark/WhirlwindTourOfPython/blob/master/17-Figures.ipynb)
 
+## 라이센스
 
-## License and Citation
+이 노트북은 "No Rights Reserved" [CC0](https://github.com/jakevdp/WhirlwindTourOfPython/blob/master/LICENSE) 라이센스를 따릅니다. 따라서 어떤 목적으로도 재사용, 수정이 가능합니다.
 
-This material is released under the "No Rights Reserved" [CC0](LICENSE)
-license, and thus you are free to re-use, modify, build-on, and enhance
-this material for any purpose.
-Read more about CC0 [here](https://creativecommons.org/share-your-work/public-domain/cc0/).
+CC0 라이센스에 대해서는 [여기](https://creativecommons.org/share-your-work/public-domain/cc0/)를 참고하세요.
 
-If you do use this material, I would appreciate attribution.
-An attribution usually includes the title, author, publisher, and ISBN.
-For example:
+이 노트북을 사용하려면 적절한 인용을 부탁합니다(하지만 필수는 아닙니다).
 
-> A Whirlwind Tour of Python by Jake VanderPlas (O’Reilly). Copyright 2016 O’Reilly Media, Inc., 978-1-491-96465-1.
+> *A Whirlwind Tour of Python* by Jake VanderPlas (O’Reilly). Copyright 2016 O’Reilly Media, Inc., 978-1-491-96465-1
